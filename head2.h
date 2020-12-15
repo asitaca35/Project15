@@ -33,8 +33,9 @@ public:
 	}
 
 
-	void initStudent()
-	{
+	void initStudent(string name)
+	{	
+		printf("%s", name.c_str());
 		for (int i = 0; i < CNT; i++)
 		{
 			grades[i] = rand() % 101;
@@ -45,12 +46,14 @@ public:
 
 	void show()
 	{
-		printf("%s", name.c_str());
+		
+		printf("%s \n\n", name.c_str());
 		for (int i = 0; i < CNT; i++)
 		{
-			printf("%5d", grades[i]);
+			
+			printf("%2s %d\n", subtitles[i].c_str(), grades[i]);
 		}
-		printf("\n");
+		printf("========================\n");
 	}
 
 	int* G()
